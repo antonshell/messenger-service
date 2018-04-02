@@ -44,8 +44,8 @@ class SendMessagesCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('app:send-messaged')
-            ->setDescription('Test');
+            ->setName('app:send-messages')
+            ->setDescription('Send Messages');
     }
 
     /**

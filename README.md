@@ -74,7 +74,7 @@ curl -X POST \
 3 . Отправить сообщения из очереди(консольная команда, можно запускать по cron)
 
 ```
-php bin/console app:send-messaged
+php bin/console app:send-messages
 ```
 
 4 . Добавить сообщения, которые не удалось отправить обратно в очередь

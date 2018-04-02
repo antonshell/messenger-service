@@ -10,24 +10,22 @@ class RedisQueue implements QueueInterface
 {
     const CONFIG_KEY = 'task_queue';
 
-    //private $config;
-
     private $redis;
 
     private $popTimeout = 1;
+
+    private $host = '127.0.0.1';
+
+    private $port = '6379';
+
+    private $password = '';
 
     /**
      * @return \Credis_Client
      */
     public function getConnection(){
         if(!$this->redis){
-            //$configData = $this->config->getConfigData(self::CONFIG_KEY) ?: [];
-
-            $host = '127.0.0.1';
-            $port = '6379';
-            $password = '';
-
-            $this->redis = new \Credis_Client($host, $port, null,'', 0, $password);
+            $this->redis = new \Credis_Client($this->host, $this->port, null,'', 0, $this->password);
         }
 
         return $this->redis;

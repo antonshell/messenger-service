@@ -18,8 +18,8 @@ class MainController extends Controller
     public function indexAction(): Response
     {
         return new JsonResponse([
-            'status' => 'ok',
-            'message' => 'message service'
+            'status' => Response::HTTP_OK,
+            'message' => 'Message service'
         ]);
     }
 }

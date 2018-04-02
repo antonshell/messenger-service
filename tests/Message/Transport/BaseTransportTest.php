@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Service;
+namespace App\Tests\Message\Transport;
 
 use PHPUnit\Framework\TestCase;
 
